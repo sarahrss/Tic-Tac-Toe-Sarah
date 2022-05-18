@@ -2,7 +2,7 @@
  
 Instalación: Clonar el repositorio ingresando el siguiente código en la terminal de la computadora:
 
-$ git clone 
+$ git clone https://github.com/sarahrss/Tic-Tac-Toe-Sarah.git 
 
 Correrlo en Python:
 
