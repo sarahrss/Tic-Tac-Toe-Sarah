@@ -69,61 +69,9 @@ def decide_move(board: list, player_id: str) -> list:
     """
     Decides next move to make.
     """
-    def is_player_win(self, player):
-        win = None
-
-        n = len(self.board)
-
-        # varifica las filas
-        for i in range(n):
-            win = True
-            for j in range(n):
-                if self.board[i][j] != player:
-                    win = False
-                    break
-            if win:
-                return win
-
-        # verifica las columnas
-        for i in range(n):
-            win = True
-            for j in range(n):
-                if self.board[j][i] != player:
-                    win = False
-                    break
-            if win:
-                return win
-
-        # verifica las diagonales
-        win = True
-        for i in range(n):
-            if self.board[i][i] != player:
-                win = False
-                break
-        if win:
-            return win
-
-        win = True
-        for i in range(n):
-            if self.board[i][n - 1 - i] != player:
-                win = False
-                break
-        if win:
-            return win
-        return False
-
-        for row in self.board:
-            for item in row:
-                if item == '-':
-                    return False
-        return True
-
-    def is_board_filled(self):
-        for row in self.board:
-            for item in row:
-                if item == '-':
-                    return False
-        return True
+    row = randint(0, 2)
+    column = randint(0, 2)
+    return [row, column]
 
 
 def validate_move(board: list, move: list) -> bool:
